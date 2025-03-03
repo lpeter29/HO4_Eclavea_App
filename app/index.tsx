@@ -1,7 +1,8 @@
 import React from "react";
 import { View, Text, Image, FlatList } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
-import { styles } from "./style";
+import { styles } from "../Styles/style";
+
 
 const services = [
   { id: "1", name: "Wallet", icon: "wallet-outline", color: "#FF4B5C" },
@@ -20,10 +21,10 @@ const Dashboard = () => (
   <View style={styles.container}>
     {/* Header */}
     <View style={styles.header}>
-      <Image source={{ uri: "https://via.placeholder.com/50" }} style={styles.profileImage} />
+      <Image source={require("../assets/images/iconko.png")} style={styles.profileImage} />
       <Text style={styles.userName}>
         Hello {"\n"}
-        <Text style={styles.boldText}>One Achmad</Text>
+        <Text style={styles.boldText}>Peter Paul F. Eclavea</Text>
       </Text>
       <Ionicons name="search-outline" size={24} color="black" style={styles.searchIcon} />
     </View>
