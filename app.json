@@ -46,11 +46,10 @@
         "projectId": "83cd41b6-7dc0-4af5-ba60-48cddab073d1"
       }
     },
-    "runtimeVersion": {
-      "policy": "appVersion"
-    },
+    "runtimeVersion": "1.0.0",
     "updates": {
       "url": "https://u.expo.dev/83cd41b6-7dc0-4af5-ba60-48cddab073d1"
-    }
+    },
+    "owner": "lpeter"
   }
 }
