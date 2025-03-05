@@ -1,21 +1,6 @@
 import React from "react";
-import { View, Text, Image, FlatList } from "react-native";
-import { Ionicons } from "@expo/vector-icons";
+import { View, Text, Image } from "react-native";
 import { styles } from "../Styles/style";
-
-
-const services = [
-  { id: "1", name: "Wallet", icon: "wallet-outline", color: "#FF4B5C" },
-  { id: "2", name: "Transfer", icon: "swap-horizontal", color: "#4B9EFF" },
-  { id: "3", name: "Pay", icon: "cash-outline", color: "#FFB74D" },
-  { id: "4", name: "Topup", icon: "add-circle-outline", color: "#4CAF50" },
-];
-
-const transactions = [
-  { id: "1", name: "Dribble", desc: "Payment Received", amount: "$275", color: "#E91E63" },
-  { id: "2", name: "Google Wallet", desc: "Payment via wallet can be done", amount: "$180", color: "#4CAF50" },
-  { id: "3", name: "Uplabs", desc: "Payment Received", amount: "$137", color: "#1E88E5" },
-];
 
 const Dashboard = () => (
   <View style={styles.container}>
@@ -26,7 +11,7 @@ const Dashboard = () => (
         Hello {"\n"}
         <Text style={styles.boldText}>Peter Paul F. Eclavea</Text>
       </Text>
-      <Ionicons name="search-outline" size={24} color="black" style={styles.searchIcon} />
+      <Image source={require("../assets/images/iconko.png")} style={styles.searchIcon} />
     </View>
 
     {/* Balance Card */}
@@ -37,34 +22,64 @@ const Dashboard = () => (
       <Text style={styles.expiry}>Ex. Date 10/28</Text>
     </View>
 
-    {/* Services */}
+    {/* Services Section */}
     <View style={styles.services}>
-      {services.map((service) => (
-        <View key={service.id} style={[styles.serviceButton, { backgroundColor: service.color }]}>
-          <Ionicons name={service.icon} size={28} color="white" />
-          <Text style={styles.serviceText}>{service.name}</Text>
-        </View>
-      ))}
+      <View style={[styles.serviceButton, { backgroundColor: "#FF4B5C" }]}>
+        <Image source={require("../assets/images/iconko.png")} style={styles.serviceIcon} />
+        <Text style={styles.serviceText}>Wallet</Text>
+      </View>
+
+      <View style={[styles.serviceButton, { backgroundColor: "#4B9EFF" }]}>
+        <Image source={require("../assets/images/iconko.png")} style={styles.serviceIcon} />
+        <Text style={styles.serviceText}>Transfer</Text>
+      </View>
+
+      <View style={[styles.serviceButton, { backgroundColor: "#FFB74D" }]}>
+        <Image source={require("../assets/images/iconko.png")} style={styles.serviceIcon} />
+        <Text style={styles.serviceText}>Pay</Text>
+      </View>
+
+      <View style={[styles.serviceButton, { backgroundColor: "#4CAF50" }]}>
+        <Image source={require("../assets/images/iconko.png")} style={styles.serviceIcon} />
+        <Text style={styles.serviceText}>Topup</Text>
+      </View>
     </View>
 
-    {/* Transactions */}
+    {/* Recent Transactions */}
     <Text style={styles.sectionTitle}>Recent Transactions</Text>
-    <FlatList
-      data={transactions}
-      keyExtractor={(item) => item.id}
-      renderItem={({ item }) => (
-        <View style={styles.transactionItem}>
-          <View style={styles.transactionLeft}>
-            <View style={[styles.iconContainer, { backgroundColor: item.color }]} />
-            <View>
-              <Text style={styles.transactionTitle}>{item.name}</Text>
-              <Text style={styles.transactionDesc}>{item.desc}</Text>
-            </View>
-          </View>
-          <Text style={[styles.amount, { color: item.color }]}>{item.amount}</Text>
+
+    <View style={styles.transactionItem}>
+      <View style={styles.transactionLeft}>
+        <Image source={require("../assets/images/iconko.png")} style={styles.transactionIcon} />
+        <View>
+          <Text style={styles.transactionTitle}>Dribble</Text>
+          <Text style={styles.transactionDesc}>Payment Received</Text>
         </View>
-      )}
-    />
+      </View>
+      <Text style={[styles.amount, { color: "#E91E63" }]}>$275</Text>
+    </View>
+
+    <View style={styles.transactionItem}>
+      <View style={styles.transactionLeft}>
+        <Image source={require("../assets/images/iconko.png")} style={styles.transactionIcon} />
+        <View>
+          <Text style={styles.transactionTitle}>Google Wallet</Text>
+          <Text style={styles.transactionDesc}>Payment via wallet can be done</Text>
+        </View>
+      </View>
+      <Text style={[styles.amount, { color: "#4CAF50" }]}>$180</Text>
+    </View>
+
+    <View style={styles.transactionItem}>
+      <View style={styles.transactionLeft}>
+        <Image source={require("../assets/images/iconko.png")} style={styles.transactionIcon} />
+        <View>
+          <Text style={styles.transactionTitle}>Uplabs</Text>
+          <Text style={styles.transactionDesc}>Payment Received</Text>
+        </View>
+      </View>
+      <Text style={[styles.amount, { color: "#1E88E5" }]}>$137</Text>
+    </View>
   </View>
 );
 

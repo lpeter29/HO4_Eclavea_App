@@ -26,8 +26,8 @@ export const styles = StyleSheet.create({
     fontWeight: "bold",
   },
   searchIcon: {
-    position: "absolute",
-    right: 0,
+    width: 24,
+    height: 24,
   },
   card: {
     backgroundColor: "#3B82F6",
@@ -65,6 +65,11 @@ export const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
   },
+  serviceIcon: {
+    width: 28,
+    height: 28,
+    tintColor: "white",
+  },
   serviceText: {
     color: "white",
     marginTop: 5,
@@ -87,7 +92,7 @@ export const styles = StyleSheet.create({
     flexDirection: "row",
     alignItems: "center",
   },
-  iconContainer: {
+  transactionIcon: {
     width: 40,
     height: 40,
     borderRadius: 20,
