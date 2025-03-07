@@ -35,8 +35,16 @@ export const styles = StyleSheet.create({
     borderRadius: 10,
     marginBottom: 20,
   },
+  cardIcon: {
+    position: "absolute",
+    top: 10,
+    right: 10,
+    width: 40,
+    height: 40,
+  },  
   cardText: {
     color: "white",
+    fontWeight:'bold',
     fontSize: 16,
   },
   balanceText: {
@@ -64,6 +72,7 @@ export const styles = StyleSheet.create({
     borderRadius: 10,
     justifyContent: "center",
     alignItems: "center",
+    backgroundColor: "#FF4B5C",
   },
   serviceIcon: {
     width: 28,
@@ -92,11 +101,25 @@ export const styles = StyleSheet.create({
     flexDirection: "row",
     alignItems: "center",
   },
-  transactionIcon: {
+  dribbleicon: {
     width: 40,
     height: 40,
-    borderRadius: 20,
+    borderRadius: 5,
     marginRight: 10,
+    backgroundColor: "#FF4B5C",
+  },
+  googleicon: {
+    width: 40,
+    height: 40,
+    borderRadius: 5,
+    marginRight: 10,
+  },
+  uplabsicon: {
+    width: 40,
+    height: 40,
+    borderRadius: 5,
+    marginRight: 10,
+    backgroundColor: "#FF4B5C",
   },
   transactionTitle: {
     fontWeight: "bold",
